@@ -7,7 +7,7 @@
     
 <?php
     }else{
-?>
+?>      <?php echo $_SESSION['id']; ?>
         <div class='ribbon-blue'>Cài đặt API và Chọn hệ thống Link</div>
         <form>
         <label> Tocdo.in </label> <br>

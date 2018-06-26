@@ -23,11 +23,12 @@ require_once('config.php');
             <ul class="menu">
             <?php if(isset($_SESSION['user'])){ ?>
                 <li><a href="index.php?page=logout">Thoát</a></li>
+                <li><a href="index.php?page=setup">Cài đặt hệ thống</a></li>
+                <li><a href="#">Tạo link</a></li>
             <?php }else{ ?>
                 <li><a href="index.php?page=login">Đăng nhập</a></li>
+                <li><a href="index.php?page=register">Đăng ký</a></li>
             <?php } ?>
-            <li><a href="index.php?page=setup">Cài đặt hệ thống</a></li>
-            <li><a href="#">Tạo link</a></li>
             </ul>
         </td>
         <td>
@@ -44,13 +45,16 @@ require_once('config.php');
                     case 'setup':
                         require_once('inc/setup.php');
                         break;
+                    case 'register':
+                        require_once('inc/register.php');
+                        break;
                     default:
                         echo "Đi sai hướng";
                         break;
                 }
             }
             else{
-                echo "Trang chủ";
+                require_once('inc/home.php');
             }
             ?>
         </td>
