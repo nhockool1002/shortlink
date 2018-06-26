@@ -1,0 +1,32 @@
+html,body{
+    font-family: 'Dancing Script', cursive;
+}
+select, option {
+    font-family: 'Dancing Script', cursive;
+}
+.menu li{
+    font-weight: bolder;
+}
+.menu li a{
+    text-decoration: none;
+    color:red;
+}
+.menu li a:visited{
+    color:red;
+}
+.ribbon-red {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ff9d9d;
+    border-bottom: #e45858 2px solid;
+    margin-bottom: 10px;
+}
+.ribbon-blue {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #9393ff;
+    border-bottom: blue 2px solid;
+    margin-bottom: 10px;
+}
