@@ -24,7 +24,7 @@ require_once('config.php');
             <?php if(isset($_SESSION['user'])){ ?>
                 <li><a href="index.php?page=logout">Thoát</a></li>
                 <li><a href="index.php?page=setup">Cài đặt hệ thống</a></li>
-                <li><a href="#">Tạo link</a></li>
+                <li><a href="index.php?page=create">Tạo link</a></li>
             <?php }else{ ?>
                 <li><a href="index.php?page=login">Đăng nhập</a></li>
                 <li><a href="index.php?page=register">Đăng ký</a></li>
@@ -48,13 +48,21 @@ require_once('config.php');
                     case 'register':
                         require_once('inc/register.php');
                         break;
+                    case 'create':
+                        require_once('inc/create.php');
+                        break;
                     default:
                         echo "Đi sai hướng";
                         break;
                 }
             }
             else{
+                if(isset($_GET['get'])){
+                    require_once('inc/getlink.php');
+                }
+                else{
                 require_once('inc/home.php');
+                }
             }
             ?>
         </td>

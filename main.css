@@ -1,8 +1,11 @@
 html,body{
     font-family: 'Dancing Script', cursive;
 }
-select, option {
+select, option, input {
     font-family: 'Dancing Script', cursive;
+}
+input{
+    width:300px;
 }
 .menu li{
     font-weight: bolder;
@@ -29,4 +32,36 @@ select, option {
     background-color: #9393ff;
     border-bottom: blue 2px solid;
     margin-bottom: 10px;
+}
+.ribbon-green {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #93ffbe;
+    border-bottom: #00ffa1 2px solid;
+    margin-bottom: 10px;
+}
+a.orange-button {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: orange;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Sans serif';
+    text-decoration: none;
+}
+a.green-button {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #1d8a4d;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Sans serif';
+    text-decoration: none;
 }
