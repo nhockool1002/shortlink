@@ -25,10 +25,11 @@ function createHash($conn){
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
     $linkdown = $_POST['linkdown'];
+    $linkorigin = $_POST['linkorigin'];
     $hash = createHash($conn);
     $user_id = $_SESSION['id'];
-    $sql = "INSERT INTO `origin_link`(`name_link`, `linkdownload`, `hash`, `user_id`) 
-            VALUES ('$title','$linkdown','$hash','$user_id')";
+    $sql = "INSERT INTO `origin_link`(`name_link`, `linkdownload`, `hash`, `user_id`,`linkorigin`) 
+            VALUES ('$title','$linkdown','$hash','$user_id','$linkorigin')";
     $conn->query($sql);
     $_SESSION['flash'] = "<div class='ribbon-green'>Đã tạo link kết !!!</div>";
     header('Location:../index.php?page=create');

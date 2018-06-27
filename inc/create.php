@@ -10,6 +10,7 @@
     ?>
     <form method="POST" action="exe/enf-create.php">
         <label>Tiêu đề</label> <br><input type="text" name="title" required><br>
+        <label>Link gốc</label> <br><input type="text" name="linkorigin"><br>
         <label>Link tải</label> <br><input type="text" name="linkdown" required><br>
         <br>
         <button type="submit" name="submit">TẠO LINK</button>

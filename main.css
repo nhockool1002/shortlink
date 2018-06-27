@@ -65,3 +65,7 @@ a.green-button {
     font-family: 'Sans serif';
     text-decoration: none;
 }
+.urllist,.urllist:visited{
+    color:red;
+    text-decoration: none;
+}

@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 26, 2018 lúc 08:44 CH
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Thời gian đã tạo: Th6 27, 2018 lúc 06:42 AM
+-- Phiên bản máy phục vụ: 10.1.25-MariaDB
+-- Phiên bản PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -30,6 +32,7 @@ CREATE TABLE `origin_link` (
   `id` int(11) NOT NULL,
   `name_link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `linkdownload` text COLLATE utf8_unicode_ci NOT NULL,
+  `linkorigin` text COLLATE utf8_unicode_ci,
   `hash` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -38,10 +41,9 @@ CREATE TABLE `origin_link` (
 -- Đang đổ dữ liệu cho bảng `origin_link`
 --
 
-INSERT INTO `origin_link` (`id`, `name_link`, `linkdownload`, `hash`, `user_id`) VALUES
-(1, 'Lập trình back-end cơ bản với nodejs & mongodb, mongooose, postgresql', 'https://drive.google.com/open?id=1sNRdPTUeqzzEfqXxwLWFd3kfWfw2qU4_', 'EqQ0vV6SsZsC', 1),
-(2, 'Há»c láº­p trÃ¬nh PHP/MySql Back-end theo mÃ´ hÃ¬nh MVC', 'https://drive.google.com/drive/u/3/folders/0B7MInocg71qdV0JRZG9XOGh1RE0', 'dBWqWX0d55a0', 1),
-(3, 'Láº­p trÃ¬nh Web tá»‘c Ä‘á»™ cao, thá»i gian thá»±c vá»›i NodeJS', 'https://drive.google.com/drive/folders/12bwwtn-8_O0XRgtij07mO0hu4o3ZZubR?usp=sharing', 'ZHxmMwit0XXZ', 1);
+INSERT INTO `origin_link` (`id`, `name_link`, `linkdownload`, `linkorigin`, `hash`, `user_id`) VALUES
+(1, 'Lập trình back-end cơ bản với nodejs & mongodb, mongooose, postgresql', 'https://drive.google.com/open?id=1sNRdPTUeqzzEfqXxwLWFd3kfWfw2qU4_', 'http://google.com', 'EqQ0vV6SsZsC', 1),
+(2, 'Học lập trình PHP/MySql Back-end theo mô hình MVC', 'https://drive.google.com/drive/u/3/folders/0B7MInocg71qdV0JRZG9XOGh1RE0', '', 'dBWqWX0d55a0', 1);
 
 -- --------------------------------------------------------
 
@@ -105,7 +107,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `service_id`) VALUES
-(1, 'nhockool1002', '6ac66b5cb3d198e4587a747c13ac3c9d', 'nhut.nguyenminh.it@gmail.com', 1),
+(1, 'nhockool1002', '6ac66b5cb3d198e4587a747c13ac3c9d', 'nhut.nguyenminh.it@gmail.com', 2),
 (2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 3);
 
 --
@@ -184,6 +186,7 @@ ALTER TABLE `token_api`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `service` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
