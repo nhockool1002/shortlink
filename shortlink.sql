@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 27, 2018 lúc 06:42 AM
--- Phiên bản máy phục vụ: 10.1.25-MariaDB
--- Phiên bản PHP: 5.6.31
+-- Thời gian đã tạo: Th8 22, 2018 lúc 05:45 CH
+-- Phiên bản máy phục vụ: 10.1.21-MariaDB
+-- Phiên bản PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,8 +40,7 @@ CREATE TABLE `origin_link` (
 --
 
 INSERT INTO `origin_link` (`id`, `name_link`, `linkdownload`, `linkorigin`, `hash`, `user_id`) VALUES
-(1, 'Lập trình back-end cơ bản với nodejs & mongodb, mongooose, postgresql', 'https://drive.google.com/open?id=1sNRdPTUeqzzEfqXxwLWFd3kfWfw2qU4_', 'http://google.com', 'EqQ0vV6SsZsC', 1),
-(2, 'Học lập trình PHP/MySql Back-end theo mô hình MVC', 'https://drive.google.com/drive/u/3/folders/0B7MInocg71qdV0JRZG9XOGh1RE0', '', 'dBWqWX0d55a0', 1);
+(1, 'Khóa học lập trình web tốc độ cao, thời gian thực với NodeJS', 'https://drive.google.com/open?id=1GhawykktxYzivFFMCSxScey-XczSdo9G', 'https://drive.google.com/open?id=1GhawykktxYzivFFMCSxScey-XczSdo9G', '4sL91Hjm9BTU', 1);
 
 -- --------------------------------------------------------
 
@@ -107,7 +104,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `service_id`) VALUES
-(1, 'nhockool1002', '6ac66b5cb3d198e4587a747c13ac3c9d', 'nhut.nguyenminh.it@gmail.com', 2),
+(1, 'nhockool1002', '6ac66b5cb3d198e4587a747c13ac3c9d', 'nhut.nguyenminh.it@gmail.com', 3),
 (2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 3);
 
 --
@@ -149,7 +146,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `origin_link`
 --
 ALTER TABLE `origin_link`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `service`
 --
@@ -186,7 +183,6 @@ ALTER TABLE `token_api`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `service` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

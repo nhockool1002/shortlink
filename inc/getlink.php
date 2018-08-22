@@ -39,6 +39,7 @@
 <?php $url_finally = $url_api.'api='.$apikey.'&url='.$origin; ?>
 <a class="green-button" href="<?php echo $linkorigin; ?>" target="__blank">XEM KHÓA HỌC</a><a class="orange-button" href="<?php echo $url_finally; ?>" target="__blank">TẢI KHÓA HỌC</a>
 <?php
+    //header('Location:'.$url_finally);
         }
     ?> 
 </div>

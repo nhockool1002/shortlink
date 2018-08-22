@@ -12,6 +12,22 @@ require_once('config.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>API Shorlink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DATA K-ZONE Redirect Page - Chuyên trang dùng để lưu trữ nội dung và phân tích dữ liệu hiện có và quản lý theo tài khoản" />
+	<meta name="keywords" content="data, data k zone, data-k-zone, dkz, tài liệu, mã nguồn, sourcecode, dữ liệu" />
+	<meta name="author" content="Data K-Zone" />
+	<meta property="og:title" content="DATA K-ZONE Redirect Page"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="DATA K-ZONE Redirect Page"/>
+	<meta property="og:description" content="DATA K-ZONE Redirect Page - Chuyên trang dùng để lưu trữ nội dung và phân tích dữ liệu hiện có và quản lý theo tài khoản"/>
+	<meta name="twitter:title" content="DATA K-ZONE Redirect Page" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="img/img.jpg">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Francois+One&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
